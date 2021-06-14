@@ -1,0 +1,249 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>  PREDICTION </title> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+  font-family: Times New Roman;
+}
+.bodycontainer{
+  position: center;
+}
+.one{
+  font-size: 28px;
+  text-decoration: none;
+  color:white;
+  margin-top: 30px;
+  padding: 5px 10px;
+  transition: 0.6s ease;
+  width: 70%; 
+  height: 100%;
+  padding: 10px;
+  border: 1px outset red;
+  background-color: black;
+}
+
+.one:hover{
+  background: blue;
+}
+
+.one.active {
+  background: blue;
+}
+.selectt { 
+  color: #fff; 
+  padding: 10px; 
+  display: none;
+  background: blue;            
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: white;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+} 
+
+.joint{
+  position: center;
+}
+
+.left_side{
+  text-align: left;
+}
+.right_side{
+  text-align: right;
+}
+
+.centered{
+  text-align: center;
+}
+
+
+</style>
+</head>
+<body>  
+
+  <div id="outerbody" style="width: 800px; 
+  height: 700px;
+  margin: 0 auto;">
+  <div id="header" style="height: 150px;
+  background: url(top_photo.jpg);">
+
+  </div>
+  <div id="bodycontainer">
+
+  <div id="leftsection"  style="background-color: transparent;
+  font-size: 18px;
+  float: left;
+  width: 25%;
+  height: 100%; ">
+
+  <ul style="list-style: none; ">
+    <hr>
+    <li><a href="home.html">Home </a></li>
+    <hr>
+    <li><a href="emotion.html">Emotional Controller</a></li>
+    <hr>
+    <li><a href="types.html">Categories</a></li>
+    <hr>
+    <li><a href="about.html">About us</a></li>
+    <hr>
+  </ul>
+
+  </div>
+
+  <div id="rightsection" style="background-color: transparent;
+  float: right;
+  width: 70%;
+  height: 100%;
+  padding-left: 10px; ">
+
+  <h1> Emotional Controller: </h1>
+
+ 
+<div class="one">
+
+    <div class="row">
+      <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3"> Happy
+      </div>
+        
+       
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+        <input type="checkbox" name="colorCheckbox" value="first">
+      </div>
+       
+
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">Sad
+    </div>
+        
+</div>
+
+        <div class="first selectt">
+            <input type="range" min="1" max="3" value="2" class="slider" id="sliderRange"> 
+        </div>
+          
+        
+  </div>
+<br>
+
+  <div class="one">
+    <div class="left_side">
+        <label> Funny</label>
+       
+    <div class="centered">
+        <input type="checkbox" name="colorCheckbox" value="second">
+        </div>
+
+    <div class="right_side">
+        <label> Serious </label> 
+        </div>
+    </div>
+
+        <div class="second selectt">
+            <input type="range" min="1" max="3" value="2" class="slider" id="sliderRange"> 
+        </div>
+          
+        
+  </div>
+<br>
+
+<div class="one">
+    <div class="left_side">
+        <label> Short</label>
+       
+    <div class="centered">
+        <input type="checkbox" name="colorCheckbox" value="third">
+        </div>
+
+    <div class="right_side">
+        <label> Long </label> 
+        </div>
+    </div>
+
+        <div class="third selectt">
+            <input type="range" min="1" max="3" value="2" class="slider" id="sliderRange"> 
+        </div>    
+        
+  </div>
+
+<br>
+        
+<div class="one">
+    <div class="left_side">
+        <label> Expected </label>
+       
+    <div class="centered">
+        <input type="checkbox" name="colorCheckbox" value="fourth">
+        </div>
+
+    <div class="right_side">
+        <label> Unexpected </label> 
+        </div>
+    </div>
+
+        <div class="fourth selectt">
+            <input type="range" min="1" max="3" value="2" class="slider" id="sliderRange"> 
+        </div>              
+  </div>
+
+
+
+<div class="one">
+  <div class="centered">
+    <a href="search_book.html"> SEARCH </a>
+        </div>           
+
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js">
+</script>   
+  
+        <script type="text/javascript"> 
+
+            $(document).ready(function() { 
+                $('input[type="checkbox"]').click(function() { 
+                    var inputValue = $(this).attr("value"); 
+                    $("." + inputValue).toggle(); 
+                }); 
+            }); 
+        </script> 
+ </div>
+
+
+ </div>
+ </div>                 
+
+</body>
+</html>
